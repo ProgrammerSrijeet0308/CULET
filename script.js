@@ -75,10 +75,10 @@ function end() {
 		if(selected[i]==CorrOpts[i])
 		{
 			b=b+1
-			c.push(i)
+			c.push(i+1)
 		}
 		else
-			incor.push(i)
+			incor.push(i+1)
 	}
 	txt="Attempted: "+a+" Score: "+b+"<br> Correct: "+c +"<br> Incorrect/Not-Attempted: "+incor
 	res.innerHTML=txt
