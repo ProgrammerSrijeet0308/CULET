@@ -115,7 +115,7 @@ select.addEventListener("click", function(){
 		qns[currQn-1].style.color="black"
 	else
 	{
-		qns[currQn-1].style.color="blue"
+		qns[currQn-1].style.color="red"
 	}	
 	selected[currQn-1]=currOpt
 })
