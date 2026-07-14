@@ -64,23 +64,21 @@ for(i=1;i<6;i++)
 }
 
 function end() {
-	a=0
-	b=0
-	c=[]
+	cor=[]
 	incor=[]
+	unatt=[]
 	for(i=0;i<100;i++)
 	{
 		if(selected[i]==0)
-			a=a+1
-		if(selected[i]==CorrOpts[i])
+			unatt.push(i)
+		else if(selected[i]==CorrOpts[i])
 		{
-			b=b+1
-			c.push(i+1)
+			cor.push(i)
 		}
 		else
-			incor.push(i+1)
+			incor.push(i)
 	}
-	txt="Attempted: "+a+" Score: "+b+"<br> Correct: "+c +"<br> Incorrect/Not-Attempted: "+incor
+	txt="Correct: "+(cor.length)+" Incorrect: "+(incor.length)+" Score: "+(cor.length-0.25*incor.length)+"<br> Correct: "+cor +"<br> Incorrect: "+incor+"<br> Not-Attempted: "+unatt
 	res.innerHTML=txt
 }
 
